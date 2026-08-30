@@ -6,14 +6,15 @@
     "node": ">=22.12.0"
   },
   "scripts": {
-    "dev": "bun run --bun astro dev",
+    "client": "bun run --bun astro dev",
     "build": "bun run --bun astro build",
     "preview": "astro preview",
     "astro": "astro",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint": "eslint 'src/**/*.{js,ts,tsx,astro}'",
-    "worker": "wrangler dev"
+    "worker": "wrangler dev",
+    "dev": "concurrently \"bun run --bun astro dev\" \"wrangler dev\""
   },
   "dependencies": {
     "@astrojs/react": "^6.0.4",
@@ -22,6 +23,7 @@
     "@types/react-dom": "^19.2.5",
     "@typescript-eslint/parser": "^8.68.0",
     "astro": "^7.2.9",
+    "concurrently": "^10.0.5",
     "eslint": "^10.9.1",
     "eslint-plugin-astro": "^3.1.0",
     "hono": "^4.13.5",
