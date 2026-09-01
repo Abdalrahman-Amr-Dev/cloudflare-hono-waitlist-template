@@ -11,8 +11,8 @@ export const ServerStatus = () => {
 
   return (
     <div>
-      <h1>Server status</h1>
-      <p>{stats}</p>
+      <h1 className="text-lg text-center">Server status</h1>
+      <p className="text-center text-green-500">{stats}🔥</p>
     </div>
   );
 };

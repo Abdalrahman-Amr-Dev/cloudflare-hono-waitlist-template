@@ -14,20 +14,19 @@ import { ServerStatus } from "../components/ServerStatus";
   <div class="flex justify-center p-4">
     <Signup />
   </div>
-  <ServerStatus client:load>
-    <div class="space-y-6 p-4 md:flex justify-center md:gap-4 md:space-y-0">
-      <Card
-        title="Get Interview Ready"
-        description="Need to prepare for your next job interview? We've got you covered!"
-      />
-      <Card
-        title="Review AI Slop Faster"
-        description="Review your AI-generated content faster with our tools."
-      />
-      <Card
-        title="Code Faster"
-        description="Write code faster with our AI-powered tools."
-      />
-    </div>
-  </ServerStatus>
+  <ServerStatus client:load />
+  <div class="space-y-6 p-4 md:flex justify-center md:gap-4 md:space-y-0">
+    <Card
+      title="Get Interview Ready"
+      description="Need to prepare for your next job interview? We've got you covered!"
+    />
+    <Card
+      title="Review AI Slop Faster"
+      description="Review your AI-generated content faster with our tools."
+    />
+    <Card
+      title="Code Faster"
+      description="Write code faster with our AI-powered tools."
+    />
+  </div>
 </Layout>
