@@ -9,7 +9,9 @@
   "env": {
     "staging": {
       "vars": {
-        "ENVIRONMENT": "staging"
+        "ENVIRONMENT": "staging",
+        "CF_ACCESS_DOMAIN": "",
+        "POLICY_AUD": ""
       }
     },
     "production": {
