@@ -133,6 +133,15 @@ bun run build:client
 bun run deploy:production
 ```
 
+### GitHub Actions
+
+Pushes to `main` deploy the production Worker automatically. Before the first
+push, add a repository Actions secret named `CLOUDFLARE_API_TOKEN` with a
+Cloudflare API token that has **Workers Scripts: Edit** permission for the
+target account. Create the token in Cloudflare under **My Profile → API Tokens**.
+
+The workflow is defined in `.github/workflows/deploy.yml`.
+
 ## License
 
 Add your preferred license before publishing this as a public portfolio project.
