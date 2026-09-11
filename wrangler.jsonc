@@ -12,7 +12,14 @@
         "ENVIRONMENT": "staging",
         "CF_ACCESS_DOMAIN": "",
         "POLICY_AUD": ""
-      }
+      },
+      "d1_databases": [
+        {
+          "binding": "DB",
+          "database_name": "dojo_staging_db",
+          "database_id": "c540aa54-38e1-49f4-9da2-df4a5f4d6679"
+        }
+      ]
     },
     "production": {
       "vars": {
