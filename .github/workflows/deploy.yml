@@ -4,17 +4,18 @@ on:
   push:
     branches:
       - main
+      - staging
 
 permissions:
   contents: read
 
 concurrency:
-  group: cloudflare-production
+  group: cloudflare-${{ github.ref_name }}
   cancel-in-progress: true
 
 jobs:
   deploy:
-    name: Deploy production Worker
+    name: Deploy Cloudflare Worker
     runs-on: ubuntu-latest
 
     steps:
@@ -29,7 +30,14 @@ jobs:
       - name: Install dependencies
         run: bun install --frozen-lockfile
 
-      - name: Deploy to Cloudflare
+      - name: Deploy staging Worker
+        if: github.ref_name == 'staging'
+        run: bun run deploy:staging
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+
+      - name: Deploy production Worker
+        if: github.ref_name == 'main'
         run: bun run deploy:production
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
