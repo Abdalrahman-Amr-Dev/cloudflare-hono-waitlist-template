@@ -49,6 +49,7 @@
     "esbuild": true
   },
   "devDependencies": {
+    "@cloudflare/workers-types": "^5.20260921.1",
     "daisyui": "^5.7.22",
     "drizzle-kit": "^0.31.10",
     "prettier-plugin-tailwindcss": "^0.8.1"
