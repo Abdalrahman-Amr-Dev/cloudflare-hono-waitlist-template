@@ -1,0 +1,13 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1790027015302,
+      "tag": "0000_flimsy_umar",
+      "breakpoints": true
+    }
+  ]
+}
